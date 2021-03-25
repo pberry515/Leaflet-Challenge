@@ -19,12 +19,12 @@ let myMap = L.map("map", {
 
 streetmap.addTo(myMap);
 
-// Store our API endpoint inside queryUrl
+// Store API endpoint inside queryUrl
 let queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 d3.json(queryUrl, function(data) {
 
-  /// We will create three function. 
-  // function 1 for style, function 2 for color and function 3 for radiues
+  /// Create three functions. 
+  // function 1 for style, function 2 for color and function 3 for radius
 
   function mapStyle(feature) {
     return {
@@ -89,7 +89,7 @@ d3.json(queryUrl, function(data) {
     let colors = ["#2c99ea", "#2ceabf", "#92ea2c", "#d5ea2c","#eaa92c", "#ea2c2c"];
 
 
-  // loop thry the intervals of colors to put it in the label
+  // loop through the intervals of colors to put it in the label
     for (var i = 0; i<grades.length; i++) {
       div.innerHTML +=
       "<i style='background: " + colors[i] + "'></i> " +
